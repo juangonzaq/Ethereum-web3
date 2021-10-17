@@ -25,9 +25,9 @@ contract Rewards {
 
     constructor() {
         owner = msg.sender;
-        products.push(Product('Hamburguesa', 2 ether));
-        products.push(Product('Alitas bufalo', 1 ether));
-        products.push(Product('Papas fritas', 0.5 ether));
+        products.push(Product('Hamburguesa', 1 ether));
+        products.push(Product('Alitas bufalo', 2 ether));
+        products.push(Product('Papas fritas', 3 ether));
     }
 
     function buyProduct(uint productIndex) public payable {
