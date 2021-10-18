@@ -46,7 +46,7 @@ contract('Reward', accounts => {
         await instance.buyProduct(1, {from: accounts[0], value: price2});
 
         let newRewardsBalance = await instance.getRewardBalance();
-        console.log(newRewardsBalance, price, price2);        
+        assert.equal(parseFloat(newRewardsBalance), parseFloat(price) + parseFloat(price2))  
         //assert.equal(newRewardsBalance, price + price2);
     });
 
